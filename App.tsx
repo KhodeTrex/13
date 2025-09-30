@@ -13,7 +13,7 @@ const initialCategories: Category[] = [
   { id: 'cat3', name: 'پشتیبانی مشتریان' },
 ];
 
-const placeholder1 = "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjMwMCIgdmlld0JveD0iMCAwIDQwMCAzMDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgc3R5bGU9ImJhY2tncm91bmQtY29sb3I6IzFlMjkzYjsiPjxzdHlsZT4ucmVjdHtmaWxsOiMzMzQxNTU7c3Ryb2tlOiM0NzU1Njltc3Ryb2tlLXdpZHRoOjI7fS50ZXh0e2ZvbnQtZmFtaWx5OidWYXppcm1hdG4nLHNhbnMtc2VyaWY7ZmlsbDojOTRhM2I4O2ZvbnQtc2l6ZToxNnB4O3RleHQtYW5jaG9yOm1pZGRsZTt9LmxpbmV7c3Ryb2tlOiM0NzU1Njk7c3Ryb2tlLXdpZHRoOjI7bWFya2VyLWVuZDp1cmwoI2Fycm93KTt9PC9zdHlsZT48ZGVmcz48bWFya2VyIGlkPSJhcnJvdyIgdmlld0JveD0iMCAwIDEwIDEwIiByZWZYPSI1IiByZWZZPSI1IiBtYXJrZXJXaWR0aD0iNiIgbWFya2VySGVpZ2h0PSI2IiBvcmllbnQ9ImF1dG8tc3RhcnQtcmV2ZXJzZSI+PHBhdGggZD0iTSAwIDAgTCAxMCA1IEwgMCAxMCB6IiBmaWxsPSIjNDc1NTY5IiAvPjwvbWFya2VyPjwvZGVmcz48cmVjdCB4PSIxNTAiIHk9IjUwIiB3aWR0aD0iMTAwIiBoZWlnaHQ9IjYwIiByeD0iMTAiIGNsYXNzPSJyZWN0IiAvPjx0ZXh0IHg9IjIwMCIgeT0iODUiIGNsYXNzPSJ0ZXh0Ij7Yr9in2LHYpzwvdGV4dD48bGluZSB4MT0iMjAwIiB5MT0iMTEwIiB4Mj0iMjAwIiB5Mj0iMTUwIiBjbGFzcz0ibGluZSIgLz48cmVjdCB4PSIxMjUiIHk9IjE3MCIgd2lkdGg9IjE1MCIgaGVpZ2h0PSI2MCIgcng9IjEwIiBjbGFzcz0icmVjdCIgLz48dGV4dCB4PSIyMDAiIHk9IjIwNSIgY2xhc3M9InRleHQiPtmE2K/Yp9mG2Yc8L3RleHQ+PC9zdmc+";
+const placeholder1 = "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjMwMCIgdmlld0JveD0iMCAwIDQwMCAzMDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgc3R5bGU9ImJhY2tncm91bmQtY29sb3I6IzFlMjkzYjsiPjxzdHlsZT4ucmVjdHtmaWxsOiMzMzQxNTU7c3Ryb2tlOiM0NzU1Njltc3Ryb2tlLXdpZHRoOjI7fS50ZXh0e2ZvbnQtZmFtaWx5OidWYXppcm1hdG4nLHNhbnMtc2VyaWY7ZmlsbDojOTRhM2I4O2ZvbnQtc2l6ZToxNnB4O3RleHQtYW5jaG9yOm1pZGRsZTt9LmxpbmV7c3Ryb2tlOiM0NzU1NJY5O3N0cm9rZS13aWR0aDoyO21hcmtlci1lbmQ6dXJsKCNhcnJvdyk7fTwvc3R5bGU+PGRlZnM+PG1hcmtlciBpZD0iYXJyb3ciIHZpZXdCb3g9IjAgMCAxMCAxMCIgcmVmWD0iNSIgcmVmWT0iNSIgbWFya2VyV2lkdGg9IjYiIG1hcmtlckhlaWdodD0iNiIgb3JpZW50PSJhdXRvLXN0YXJ0LXJldmVyc2UiPjxwYXRoIGQ9Ik0gMCAwIEwgMTAgNSBMIDAgMTAgeiIgZmlsbD0iIzQ3NTU2OSIgLz48L21hcmtlcj48L2RlZnM+PHJlY3QgeD0iMTUwIiB5PSI1MCIgd2lkdGg9IjEwMCIgaGVpZ2h0PSI2MCIgcng9IjEwIiBjbGFzcz0icmVjdCIgLz48dGV4dCB4PSIyMDAiIHk9Ijg1IiBjbGFzcz0idGV4dCI+2K/Yp9ix2Kc8L3RleHQ+PGxpbmUgeDE9IjIwMCIgeTE9IjExMCIgeDI9IjIwMCIgeTI9IjE1MCIgY2xhc3M9ImxpbmUiIC8+PHJlY3QgeD0iMTI1IiB5PSIxNzAiIHdpZHRoPSIxNTAiIGhlaWdodD0iNjAiIHJ4PSIxMCIgY2xhc3M9InJlY3QiIC8+PHRleHQgeD0iMjAwIiB5PSIyMDUiIGNsYXNzPSJ0ZXh0Ij7ZhNiv2KfZhtmHPC90ZXh0Pjwvc3ZnPg==";
 const placeholder2 = "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjMwMCIgdmlld0JveD0iMCAwIDQwMCAzMDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgc3R5bGU9ImJhY2tncm91bmQtY29sb3I6IzFlMjkzYjsiPjxzdHlsZT4uc2hhcGV7ZmlsbDojMGYxNzJhO3N0cm9rZTojMzhiZGY4O3N0cm9rZS1widthOjI7fS50ZXh0e2ZvbnQtZmFtaWx5OidWYXppcm1hdG4nLHNhbnMtc2VyaWY7ZmlsbDojN2RkM2ZjO2ZvbnQtc2l6ZToxNnB4O3RleHQtYW5jaG9yOm1pZGRsZTt9LmxpbmV7c3Ryb2tlOiMzOGJkZjg7c3Ryb2tlLXdpZHRoOjI7bWFya2VyLWVuZDp1cmwoI2Fycm93KTt9PC9zdHlsZT48ZGVmcz48bWFya2VyIGlkPSJhcnJvdyIgdmlld0JveD0iMCAwIDEwIDEwIiByZWZYPSI1IiByZWZZPSI1IiBtYXJrZXJXaWR0aD0iNiIgbWFya2VySGVpZ2h0PSI2IiBvcmllbnQ9ImF1dG8tc3RhcnQtcmV2ZXJzZSI+PHBhdGggZD0iTSAwIDAgTCAxMCA1IEwgMCAxMCB6IiBmaWxsPSIjMzhiZGY4IiAvPjwvbWFya2VyPjwvZGVmcz48cGF0aCBkPSJNMTUwIDcwIEwyMDAgMjAgTDI1MCA3MCBMMjAwIDEyMCBaIiBjbGFzcz0ic2hhcGUiIC8+PHRleHQgeD0iMjAwIiB5PSI3NSIgY2xhc3M9InRleHQiPtiq2YHZhdi52KfYpzwvdGV4dD48bGluZSB4MT0iMjAwIiB5MT0iMTIwIiB4Mj0iMjAwIiB5Mj0iMTcwIiBjbGFzcz0ibGluZSIgLz48cmVjdCB4PSIxMjUiIHk9IjE3MCIgd2lkdGg9IjE1MCIgaGVpZ2h0PSI2MCIgcng9IjEwIiBjbGFzcz0ic2hhcGUiIC8+PHRleHQgeD0iMjAwIiB5PSIyMDUiIGNsYXNzPSJ0ZXh0Ij7Yp9i62K/Yp9mGPC90ZXh0Pjwvc3ZnPg==";
 const placeholder3 = "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjMwMCIgdmlld0JveD0iMCAwIDQwMCAzMDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgc3R5bGU9ImJhY2tncm91bmQtY29sb3I6IzFlMjkzYjsiPjxzdHlsZT4uc2hhcGV7ZmlsbDojMzM0MTU1O3N0cm9rZTojYTc4YmZhO3N0cm9rZS13aWR0aDoyO30udGV4dHtmb250LWZhbWlseTonVmF6aXJtYXRuJyBzYW5zLXNlcmlmO2ZpbGw6I2M0YjVmZDtmb250LXNpemU6MTZweDt0ZXh0LWFuY2hvcjptaWRkbGU7fS5saW5le3N0cm9rZTojYTc4YmZhO3N0cm9rZS13aWR0aDoyO21hcmtlci1lbmQ6dXJsKCNhcnJvdyk7fTwvc3R5bGU+PGRlZnM+PG1hcmtlciBpZD0iYXJyb3ciIHZpZXdCb3g9IjAgMCAxMCAxMCIgcmVmWD0iNSIgcmVmWT0iNSIgbWFya2VyV2lkdGg9IjYiIG1hcmtlckhlaWdodD0iNiIgb3JpZW50PSJhdXRvLXN0YXJ0LXJldmVyc2UiPjxwYXRoIGQ9Ik0gMCAwIEwgMTAgNSBMIDAgMTAgeiIgZmlsbD0iI2E3OGJmYSIgLz48L21hcmtlcj48L2RlZnM+PHJlY3QgeD0iMTI1IiB5PSI0MCIgd2lkdGg9IjE1MCIgaGVpZ2h0PSI2MCIgcng9IjEwIiBjbGFzcz0ic2hhcGUiIC8+PHRleHQgeD0iMjAwIiB5PSI3NSIgY2xhc3M9InRleHQiPty22K/Yp9mB2Icg2KjYp9mFPC90ZXh0PjxsaW5lIHgxPSIyMDAiIHkxPSIxMDAiIHgyPSIyMDAiIHkyPSIxNTAiIGNsYXNzPSJsaW5lIiAvPjxlbGxpcHNlIGN4PSIyMDAiIGN5PSIxOTAiIHJ4PSI4MCIgcnk9IjQwIiBjbGFzcz0ic2hhcGUiIC8+PHRleHQgeD0iMjAwIiB5PSIxOTUiIGNsYXNzPSJ0ZXh0Ij7YvdmF2KfYsTwvdGV4dD48L3N2Zz4=";
 
@@ -131,16 +131,33 @@ const AddNewsForm: React.FC<{ onSubmit: (title: string, content: string) => void
 };
 
 interface AddFlowchartFormProps {
-  onSubmit: (title: string, description: string, categoryId: string, imageUrl: string) => void;
+  onSubmit: (data: { title: string; description: string; categoryId: string; imageUrl: string; }) => void;
   categories: Category[];
+  initialData?: Flowchart | null;
 }
 
-const AddFlowchartForm: React.FC<AddFlowchartFormProps> = ({ onSubmit, categories }) => {
+const AddFlowchartForm: React.FC<AddFlowchartFormProps> = ({ onSubmit, categories, initialData }) => {
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
-  const [categoryId, setCategoryId] = useState(categories[0]?.id || '');
+  const [categoryId, setCategoryId] = useState('');
   const [imageUrl, setImageUrl] = useState<string | null>(null);
   const [fileName, setFileName] = useState<string | null>(null);
+
+  useEffect(() => {
+    if (initialData) {
+      setTitle(initialData.title);
+      setDescription(initialData.description);
+      setCategoryId(initialData.categoryId);
+      setImageUrl(initialData.imageUrl);
+      setFileName('تصویر فعلی');
+    } else {
+      setTitle('');
+      setDescription('');
+      setCategoryId(categories[0]?.id || '');
+      setImageUrl(null);
+      setFileName(null);
+    }
+  }, [initialData, categories]);
 
   const handleFileChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const file = event.target.files?.[0];
@@ -156,13 +173,8 @@ const AddFlowchartForm: React.FC<AddFlowchartFormProps> = ({ onSubmit, categorie
   
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    if(imageUrl) {
-      onSubmit(title, description, categoryId, imageUrl);
-      setTitle('');
-      setDescription('');
-      setCategoryId(categories[0]?.id || '');
-      setImageUrl(null);
-      setFileName(null);
+    if(imageUrl && title && description) {
+      onSubmit({ title, description, categoryId, imageUrl });
     }
   };
   
@@ -205,7 +217,9 @@ const AddFlowchartForm: React.FC<AddFlowchartFormProps> = ({ onSubmit, categorie
                 </div>
             )}
         </div>
-        <button type="submit" className={primaryButtonClasses} disabled={!imageUrl || !title || !description}>افزودن فلوچارت</button>
+        <button type="submit" className={primaryButtonClasses} disabled={!imageUrl || !title || !description}>
+          {initialData ? 'بروزرسانی فلوچارت' : 'افزودن فلوچارت'}
+        </button>
       </form>
   );
 };
@@ -264,6 +278,8 @@ function App() {
   const [activeView, setActiveView] = useState<'flowcharts' | 'news'>('flowcharts');
   
   const [isAddFlowchartModalOpen, setAddFlowchartModalOpen] = useState(false);
+  const [isEditFlowchartModalOpen, setEditFlowchartModalOpen] = useState(false);
+  const [editingFlowchart, setEditingFlowchart] = useState<Flowchart | null>(null);
   const [isAddNewsModalOpen, setAddNewsModalOpen] = useState(false);
   const [isAddCategoryModalOpen, setAddCategoryModalOpen] = useState(false);
 
@@ -296,6 +312,13 @@ function App() {
     }
   }, [setFlowcharts]);
 
+  const handleOpenEditModal = useCallback((flowchartId: string) => {
+    const chartToEdit = flowcharts.find(f => f.id === flowchartId);
+    if (chartToEdit) {
+      setEditingFlowchart(chartToEdit);
+      setEditFlowchartModalOpen(true);
+    }
+  }, [flowcharts]);
 
   const handleAddNews = useCallback((title: string, content: string) => {
     if (title.trim() && content.trim()) {
@@ -310,19 +333,21 @@ function App() {
     }
   }, [setNews]);
 
-  const handleAddFlowchart = useCallback((title: string, description: string, categoryId: string, imageUrl: string) => {
-    if (title.trim() && description.trim() && categoryId && imageUrl.trim()) {
-      const newFlowchart: Flowchart = {
-        id: `flow${Date.now()}`,
-        title,
-        description,
-        categoryId,
-        imageUrl,
-      };
-      setFlowcharts(prev => [newFlowchart, ...prev]);
-      setAddFlowchartModalOpen(false);
-    }
+  const handleAddFlowchart = useCallback((data: { title: string, description: string, categoryId: string, imageUrl: string }) => {
+    const newFlowchart: Flowchart = {
+      id: `flow${Date.now()}`,
+      ...data,
+    };
+    setFlowcharts(prev => [newFlowchart, ...prev]);
+    setAddFlowchartModalOpen(false);
   }, [setFlowcharts]);
+
+  const handleUpdateFlowchart = useCallback((data: { title: string; description: string; categoryId: string; imageUrl: string; }) => {
+    if (!editingFlowchart) return;
+    setFlowcharts(prev => prev.map(f => f.id === editingFlowchart.id ? { ...f, ...data } : f));
+    setEditFlowchartModalOpen(false);
+    setEditingFlowchart(null);
+  }, [editingFlowchart, setFlowcharts]);
 
 
   return (
@@ -353,6 +378,7 @@ function App() {
         selectedCategory={selectedCategory}
         userRole={userRole}
         onDeleteFlowchart={handleDeleteFlowchart}
+        onEditFlowchart={handleOpenEditModal}
         isLoaded={isLoaded}
       />
 
@@ -381,6 +407,21 @@ function App() {
       
       <Modal isOpen={isAddFlowchartModalOpen} onClose={() => setAddFlowchartModalOpen(false)} title="افزودن فلوچارت جدید">
         <AddFlowchartForm onSubmit={handleAddFlowchart} categories={categories} />
+      </Modal>
+
+      <Modal 
+        isOpen={isEditFlowchartModalOpen} 
+        onClose={() => {
+          setEditFlowchartModalOpen(false);
+          setEditingFlowchart(null);
+        }} 
+        title="ویرایش فلوچارت"
+      >
+        <AddFlowchartForm 
+          onSubmit={handleUpdateFlowchart} 
+          categories={categories} 
+          initialData={editingFlowchart}
+        />
       </Modal>
 
     </div>

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Flowchart, NewsItem, Category, UserRole } from '../types';
-import { TrashIcon } from './icons';
+import { TrashIcon, EditIcon } from './icons';
 
 // Helper: Flowchart Card Component
 interface FlowchartCardProps {
@@ -8,17 +8,27 @@ interface FlowchartCardProps {
   categoryName: string;
   userRole: UserRole;
   onDelete: (id: string) => void;
+  onEdit: (id: string) => void;
 }
-const FlowchartCard: React.FC<FlowchartCardProps> = ({ flowchart, categoryName, userRole, onDelete }) => (
+const FlowchartCard: React.FC<FlowchartCardProps> = ({ flowchart, categoryName, userRole, onDelete, onEdit }) => (
   <div className="relative group bg-slate-800/50 backdrop-blur-lg border border-slate-700/50 rounded-xl overflow-hidden shadow-lg transition-all duration-300 hover:shadow-blue-500/20 hover:border-slate-600 hover:-translate-y-1">
     {userRole === UserRole.ADMIN && (
-      <button 
-        onClick={() => onDelete(flowchart.id)}
-        className="absolute top-3 right-3 z-10 p-1.5 bg-slate-800/60 backdrop-blur-sm border border-slate-700/50 rounded-full text-slate-400 hover:bg-red-500/50 hover:text-white transition-all duration-200 opacity-0 group-hover:opacity-100"
-        aria-label={`حذف فلوچارت ${flowchart.title}`}
-      >
-        <TrashIcon className="h-4 w-4" />
-      </button>
+       <div className="absolute top-3 right-3 z-10 flex flex-col gap-2 transition-all duration-200 opacity-0 group-hover:opacity-100">
+        <button 
+          onClick={() => onEdit(flowchart.id)}
+          className="p-1.5 bg-slate-800/60 backdrop-blur-sm border border-slate-700/50 rounded-full text-slate-400 hover:bg-blue-500/50 hover:text-white transition-all"
+          aria-label={`ویرایش فلوچارت ${flowchart.title}`}
+        >
+          <EditIcon className="h-4 w-4" />
+        </button>
+        <button 
+          onClick={() => onDelete(flowchart.id)}
+          className="p-1.5 bg-slate-800/60 backdrop-blur-sm border border-slate-700/50 rounded-full text-slate-400 hover:bg-red-500/50 hover:text-white transition-all"
+          aria-label={`حذف فلوچارت ${flowchart.title}`}
+        >
+          <TrashIcon className="h-4 w-4" />
+        </button>
+      </div>
     )}
     <img className="w-full h-48 object-cover" src={flowchart.imageUrl} alt={flowchart.title} />
     <div className="p-5">
@@ -52,6 +62,7 @@ interface MainContentProps {
   selectedCategory: string | null;
   userRole: UserRole;
   onDeleteFlowchart: (id: string) => void;
+  onEditFlowchart: (id: string) => void;
   isLoaded: boolean;
 }
 
@@ -63,6 +74,7 @@ const MainContent: React.FC<MainContentProps> = ({
   selectedCategory,
   userRole,
   onDeleteFlowchart,
+  onEditFlowchart,
   isLoaded,
 }) => {
   const filteredFlowcharts = selectedCategory === 'all'
@@ -88,6 +100,7 @@ const MainContent: React.FC<MainContentProps> = ({
                                     categoryName={getCategoryName(flowchart.categoryId)} 
                                     userRole={userRole}
                                     onDelete={onDeleteFlowchart}
+                                    onEdit={onEditFlowchart}
                                 />
                             ))}
                         </div>
