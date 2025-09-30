@@ -1,0 +1,5 @@
+{
+  "name": "تراز حساب",
+  "description": "A web application to upload, categorize, and view flowcharts and processes. It features an admin role for content management and a viewer role for browsing. Includes a news section for updates.",
+  "requestFramePermissions": []
+}
